@@ -13,13 +13,13 @@ public class Triatlo {
     private List<Atleta> atletas = new ArrayList<>();
 
     public void iniciar(View view) throws InterruptedException {
-        // Cria os atletas
+        
         for (int i = 0; i < NUMERO_ATLETAS; i++) {
             String nome = "Atleta " + (i + 1);
             atletas.add(new Atleta(nome, view));
         }
 
-        // Inicia as threads para os atletas
+        
         for (Atleta atleta : atletas) {
             atleta.start();
         }
@@ -31,7 +31,7 @@ public class Triatlo {
             filaTiros.add(atleta);
         }
 
-        // Ordem de chegada dos atletas para pegar as armas
+        
         for (Atleta atleta : filaTiros) {
             semaforoArmas.acquire(); // Verifica se há arma disponível
             synchronized (atleta) {
@@ -41,7 +41,7 @@ public class Triatlo {
             semaforoArmas.release(); // Libera a arma para outro atleta
         }
 
-        // Calcula a pontuação baseada na ordem de chegada
+        
         calcularPontuacao(view);
     }
 
