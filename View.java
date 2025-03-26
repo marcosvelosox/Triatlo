@@ -1,3 +1,4 @@
+//Programando classe view
 package triatlo;
 
 import java.util.List;
