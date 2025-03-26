@@ -1,3 +1,4 @@
+//Programando classe Triatlo
 package triatlo;
 
 import java.util.ArrayList;
