@@ -1,3 +1,4 @@
+//Programando classe main
 package triatlo;
 
 public class Main {
