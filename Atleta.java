@@ -1,3 +1,4 @@
+//Programando classe atleta
 package triatlo;
 
 import java.util.Random;
